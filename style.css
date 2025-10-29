@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #004aad;
+  padding: 15px 50px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ffde59;
+}
+
+/* Home Section with Slider */
+.home {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slides {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+}
+
+/* Fade animation */
+.fade {
+  animation: fadeEffect 1.5s ease-in-out;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0.4;}
+  to {opacity: 1;}
+}
+
+/* Home content overlay */
+.home-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.home-content h1 {
+  font-size: 2.5em;
+}
+
+.home-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: #ffde59;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.home-content button:hover {
+  background: white;
+}
+
+/* About */
+.about {
+  padding: 80px 50px;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+.about h2 {
+  color: #004aad;
+  margin-bottom: 20px;
+}
+
+/* Courses */
+.courses {
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.course-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.course-card {
+  background: #e3f2fd;
+  border-radius: 10px;
+  width: 250px;
+  padding: 20px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.course-card:hover {
+  transform: scale(1.05);
+  background: #bbdefb;
+}
+
+/* Contact */
+.contact {
+  background: #f4f4f4;
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact input, .contact textarea {
+  width: 300px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.contact button {
+  background: #004aad;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact button:hover {
+  background: #003580;
+}
+
+/* Footer */
+footer {
+  background: #004aad;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
